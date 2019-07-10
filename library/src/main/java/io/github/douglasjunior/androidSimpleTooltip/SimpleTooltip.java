@@ -33,7 +33,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PointF;
 import android.graphics.RectF;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.ColorInt;
@@ -170,7 +169,7 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
         mPopupWindow.setOnDismissListener(this);
         mPopupWindow.setWidth(width);
         mPopupWindow.setHeight(height);
-        mPopupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        mPopupWindow.setBackgroundDrawable(mContext.getResources().getDrawable(R.drawable.dialog_bg));
         mPopupWindow.setOutsideTouchable(true);
         mPopupWindow.setTouchable(true);
         mPopupWindow.setTouchInterceptor(new View.OnTouchListener() {
